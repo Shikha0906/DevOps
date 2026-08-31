@@ -1,0 +1,10 @@
+services:
+  web:
+    image: shikha096/docker-sample-app:latest
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
